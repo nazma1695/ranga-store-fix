@@ -36,8 +36,12 @@ body {
 	justify-content: center;
 }
 .single-product {
-	padding: 10px;
-	transition: 0.6s;
+	padding: 20px;
+	transition: all 0.6s ease 0s;
+	background-color: rgb(205 247 191);
+	/* height: 400px; */
+	border-radius: 10px;
+	margin: 10px;
 }
 .single-product:hover {
 	box-shadow: 4px 4px 7px gray;

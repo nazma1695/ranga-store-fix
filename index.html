@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>FakeStore</title>
+		<title>NazmaStore</title>
 		<link rel="stylesheet" href="./css/style.css" />
 		<!-- Latest compiled and minified CSS -->
 		<link
@@ -23,9 +23,11 @@
 	</head>
 
 	<body>
-		<header></header>
+		<header>
+			<h1 class="text-center text-success mt-5">Welcome To Nazma Store</h1>
+		</header>
 		<main class="main">
-			<div class="search-field">
+			<!-- <div class="search-field">
 				<div class="search-box">
 					<input id="input-field" class="search-field" type="text" />
 					<button
@@ -39,6 +41,19 @@
 					>
 						Search
 					</button>
+				</div>
+			</div> -->
+			<div class="row">
+				<div class="col-md-3 col-lg-3 col-sm-5 mx-auto">
+					<div class="input-group my-3">
+						<input type="text" class="form-control" id="input-field" />
+						<span
+							class="input-group-text btn btn-success"
+							id="search-btn"
+							onclick="loadProducts()"
+							>Search</span
+						>
+					</div>
 				</div>
 			</div>
 			<div class="row">
@@ -99,6 +114,10 @@
 		<footer></footer>
 
 		<!-- add javascript  file  -->
+		<script
+			src="https://kit.fontawesome.com/dfbb0584ed.js"
+			crossorigin="anonymous"
+		></script>
 		<script src="./js/app.js"></script>
 	</body>
 </html>
