@@ -218,7 +218,7 @@ const showProducts = (products) => {
 		const div = document.createElement('div');
 		div.classList.add('product');
 		div.innerHTML = `
-      <div class="single-product">
+    <div class="single-product">
         <div>
           <img class="product-image" src=${product.image}></img>
         </div>
@@ -250,6 +250,7 @@ const addToCart = (id, price) => {
 
 	updateTaxAndCharge();
 	document.getElementById('total-Products').innerText = count;
+	updateTotal();
 };
 
 const getInputValue = (id) => {
@@ -263,12 +264,12 @@ const updatePrice = (id, value) => {
 	const convertedOldPrice = getInputValue(id);
 	const convertPrice = parseFloat(value);
 	const total = convertedOldPrice + convertPrice;
-	document.getElementById(id).innerText = Math.round(total);
+	document.getElementById(id).innerText = total;
 };
-
+// Math.fround
 // set innerText function
 const setInnerText = (id, value) => {
-	document.getElementById(id).innerText = Math.round(value);
+	document.getElementById(id).innerText = value;
 };
 
 // update delivery charge and total Tax
@@ -294,8 +295,7 @@ const updateTotal = () => {
 		getInputValue('price') +
 		getInputValue('delivery-charge') +
 		getInputValue('total-tax');
-	document.getElementById('total').innerText = grandTotal;
-	// return grandTotal;
+	document.getElementById('total').innerText = parseFloat(grandTotal);
 };
-updateTotal();
+// updateTotal();
 loadProducts();
